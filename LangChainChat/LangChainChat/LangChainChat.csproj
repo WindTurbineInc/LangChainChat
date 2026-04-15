@@ -7,9 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="LangChain.Providers.OpenAI" Version="0.13.0" />
     <ProjectReference Include="..\LangChainChat.Client\LangChainChat.Client.csproj" />
     <PackageReference Include="LangChain.Core" Version="0.13.0" />
-    <PackageReference Include="LangChain.Providers.Ollama" Version="0.13.0" />
     <PackageReference Include="LangChain.Serve" Version="0.13.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.1" />
   </ItemGroup>

@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 // add LangChainServe
 builder.Services.AddLangChainServe();
 // configure conversation name generator
-builder.Services.ConfigureNameGenerator();
+builder.Services.ConfigureNameGenerator(builder.Configuration);
 
 var app = builder.Build();
 
@@ -26,7 +26,7 @@ else
 app.UseStaticFiles();
 
 // add models
-app.UseLangChainServe(options=>options.ConfigureModels());
+app.UseLangChainServe(options => options.ConfigureModels(app.Configuration));
 
 app.UseBlazorFrameworkFiles();
 app.MapFallbackToFile("index.html");
